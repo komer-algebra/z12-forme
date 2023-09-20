@@ -3,7 +3,7 @@ import './App.css'
 
 function App() {
   const [inputText, setInputText] = useState('');   // state text-a koji unosimo
-  const [base, setBase] = useState([]);             // state prethodni unosi
+  const [base, setBase] = useState([]);           // state baza prethodnih unosa
 
   const handleSubmitFnc = (event) => {
     event.preventDefault()  // sprječava refresh stranice nakon submit-anja forme
