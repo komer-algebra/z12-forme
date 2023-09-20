@@ -19,7 +19,7 @@ function App() {
 
   const handleSubmitForm = (event) => {
     event.preventDefault()
-    alert("name: " + name + password)
+    alert("name: " + name + " - Lozinka: " + password)
     setName("")
     setPassword("")
   }
