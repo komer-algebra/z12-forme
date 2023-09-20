@@ -1,8 +1,6 @@
-# React + Vite
+# vježbe - obrasci/forme
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Potrebno napraviti React aplikaciju koja će imati sljedeće:
+1. Potrebno je napraviti formu koja će imati traku za unos teksta i gumb za potvrdu unosa
+2. Korisničkom interakcijom potrebno je spremati tekst u stanje (state) komponente
+3. Pritiskom na tipku potrebno je ispisati tekst na ekranu i vratiti na pocetno stanje
