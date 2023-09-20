@@ -14,6 +14,10 @@ function App() {
     setInputText("");              // čisti inputText state -> čisti input field
   }
 
+  const handleButtonClick = () => {
+    setBase([]);
+  }
+
   return (
     <>
       <h1>Koristeći formu</h1>
@@ -30,6 +34,7 @@ function App() {
       <ul>
         {base.map(item => (<li key={item.id}>{item.text}</li>))}
       </ul>
+      {base.length > 0 && <button onClick={handleButtonClick}>Reset list</button>}
     </>
   );
 }
