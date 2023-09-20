@@ -1,49 +1,37 @@
-import { /* useEffect ,*/ useState } from 'react'
-import './App.css'
+import { useState } from 'react';
 
-function App() {
-  const [name, setName] = useState("")
-  const [password, setPassword] = useState("")
+let nextId = 0;
 
-  const handleNameChange = event => {
-    setName(event.target.value)
-  }
+export default function List() {
+  const [text, setText] = useState('');
+  const [base, setBase] = useState([]);
 
-  const handlePasswordChange = event => {
-    setPassword(event.target.value)
-  }
+  let date = new Date();
 
-  // useEffect(() => {
-  //   console.log(name)
-  // }, [name])
-
-  const handleSubmitForm = (event) => {
-    event.preventDefault()
-    alert("name: " + name + " - Lozinka: " + password)
-    setName("")
-    setPassword("")
+  const handleButtonClick = () => {
+    setBase(
+      [ ...base, { id: nextId++, text: text }
+    ]);
+    setText("");
   }
 
   return (
     <>
-      <h1>Login:</h1>
-      <form onSubmit={handleSubmitForm}>
-        <div>
-          <label>
-              Name:
-              <input type="text" name="ime" value={name} onChange={handleNameChange}/>
-          </label>
-        </div>
-        <div>
-          <label>
-              Password:
-              <input type="password" name="password" value={password} onChange={handlePasswordChange}/>
-          </label>
-        </div>
-        <input type="submit" value="Potvrdi" />
-      </form>
+      <h1>Koristeći formu</h1>
+      <h2>...unesi text u state</h2>
+      <div>
+        <input
+          value={text}
+          onChange={e => setText(e.target.value)}
+        />
+        <button onClick={handleButtonClick}>Add</button>
+      </div>
+      <ul>
+        {base.map(item => (
+          <li key={item.id}>{item.text}</li>
+        ))}
+        {date.getVarDate}
+      </ul>
     </>
-  )
+  );
 }
-
-export default App
