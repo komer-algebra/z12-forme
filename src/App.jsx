@@ -14,7 +14,8 @@ function App() {
     setInputText("");              // čisti inputText state -> čisti input field
   }
 
-  const handleButtonClick = () => {
+  const handleButtonClick = (event) => {
+    event.preventDefault()
     setBase([]);
   }
 
